@@ -31,7 +31,14 @@ if __name__ == '__main__':
     model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
 
     # Open video file
-    cap = cv2.VideoCapture('data/first_video.h264')
+    if os.path.exists("data") == False:
+      print("no data folder exists")
+      sys.exit()
+    folder_path = "data"
+    entries = os.listdir(folder_path)
+    # Filter out directories, keeping only files (optional, but good practice)
+    filename = [entry for entry in entries if os.path.isfile(os.path.join(folder_path, entry))][0]
+    cap = cv2.VideoCapture(f'data/{filename}')
     cap_fps = cap.get(cv2.CAP_PROP_FPS)
     num_frames = imageio.get_reader("data/first_video.h264", 'ffmpeg').count_frames()
     print(num_frames)
