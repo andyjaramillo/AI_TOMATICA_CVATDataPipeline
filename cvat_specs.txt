@@ -1,0 +1,36 @@
+[
+  {
+    "name": "male",
+    "id": 1,
+    "color": "#c09053",
+    "type": "any",
+    "attributes": []
+  },
+  {
+    "name": "female",
+    "id": 2,
+    "color": "#fb5749",
+    "type": "any",
+    "attributes": []
+  },
+  {
+    "name": "age",
+    "id": 3,
+    "color": "#e51d89",
+    "type": "any",
+    "attributes": [
+      {
+        "id": 1,
+        "name": "age",
+        "input_type": "number",
+        "mutable": false,
+        "values": [
+          "0",
+          "80",
+          "1"
+        ],
+        "default_value": "0"
+      }
+    ]
+  }
+]
