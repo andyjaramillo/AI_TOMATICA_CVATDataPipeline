@@ -17,5 +17,5 @@ People Detector is a Python script that processes videos as input and performs i
    ```
 3. Place your video file in the `data` folder.
 4. Change into the project directory.
-5. Run the main script with `python3 main.py`.
+5. Run the main script with `python3 save.py`.
 6. Output will be saved as `image_{count}.png` in `output` folder.
