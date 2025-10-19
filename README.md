@@ -7,7 +7,7 @@ People Detector is a Python script that processes videos as input and performs i
 
 1. Clone the repository
    
-   `git clone https://github.com/scimone/peopledetector.git`
+   `git clone https://github.com/andyjaramillo/AI_TOMATICA_CVATDataPipeline.git`
 2. Install required packages with a conda environment
 
    ```
