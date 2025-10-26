@@ -11,9 +11,10 @@ People Detector is a Python script that processes videos as input and performs i
 2. Install required packages with a conda environment
 
    ```
-   conda create -n person-detection
-   conda activate person-detection
-   conda install --file requirements.txt
+   env name can be changed at the top of environment.yml
+   conda env create -f environment.yml
+   conda activate myenv
+   pip install -r requirements.txt
    ```
 3. Place your video file in the `data` folder.
 4. Change into the project directory.
