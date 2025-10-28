@@ -40,7 +40,7 @@ if __name__ == '__main__':
     filename = [entry for entry in entries if os.path.isfile(os.path.join(folder_path, entry))][0]
     cap = cv2.VideoCapture(f'data/{filename}')
     cap_fps = cap.get(cv2.CAP_PROP_FPS)
-    num_frames = imageio.get_reader("data/first_video.h264", 'ffmpeg').count_frames()
+    num_frames = imageio.get_reader(f'data/{filename}', 'ffmpeg').count_frames()
     print(num_frames)
     if os.path.exists("output") == False:
         os.mkdir("output")
