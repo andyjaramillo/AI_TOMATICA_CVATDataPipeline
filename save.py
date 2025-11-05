@@ -73,8 +73,12 @@ if __name__ == '__main__':
                 detections.append(Detection(box=coordinates, score=obj['confidence'], class_id=obj['class']))
             
             if len(detections) > 0:
-                
-                cv2.imwrite(f'output/image_{count}.png', frame)
+                video_name = os.path.splitext(filename)[0]
+                output_dir = os.path.join("output", video_name)
+                os.makedirs(output_dir, exist_ok=True)
+
+                cv2.imwrite(f'{output_dir}/image_{count}.png', frame)
+                #cv2.imwrite(f'output/image_{count}.png', frame)
                 print(f"wrote file image_{count}") 
                 count += 1
             # Perform object tracking
